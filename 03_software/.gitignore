@@ -1,0 +1,40 @@
+# 本文件属于「固件仓库」——03_software/ 下单独 git init 出来的那个仓库。
+# 根目录的 .gitignore 不会继承到这里，所以固件相关的忽略规则都写在本文件里。
+# （模板仓库只跟踪本目录的骨架 .gitkeep 与本文件，其余内容不进模板仓库。）
+
+# ── Keil MDK 中间产物 ──────────────────────────────────────
+*.uvguix.*
+*.uvoptx.bak
+*.scvd
+Objects/
+Listings/
+Listing/
+RTE/
+DebugConfig/
+*.o
+*.d
+*.crf
+*.dep
+*.lnp
+*.axf
+*.map
+*.iex
+*.sct
+*.build_log.htm
+*.htm
+*.__i
+JLinkLog.txt
+JLinkSettings.ini
+
+# ── 编辑器 / 系统 ──────────────────────────────────────────
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+~$*
+*.tmp
+*.bak
+
+# ── 临时解压 ──────────────────────────────────────────────
+# 需要留存的历史压缩包请放到 05_output/ 或 06_management/，不要散在固件目录
+_解压临时/

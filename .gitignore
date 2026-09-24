@@ -1,0 +1,22 @@
+# ── 03_software/ 由独立 git 仓库管控 ──────────────────────
+# 固件代码不进本仓库。本仓库只保留 03_software/ 的目录骨架（各子目录的 .gitkeep）
+# 和它自己的 .gitignore，其余内容一律忽略。
+# 用法：进到 03_software/ 里单独 git init，另起一个仓库管固件版本。
+# Keil 中间产物的忽略规则在 03_software/.gitignore 里——根目录的规则不会继承过去。
+/03_software/**
+!/03_software/**/
+!/03_software/.gitignore
+!/03_software/**/.gitkeep
+
+# ── 编辑器 / 系统 ──────────────────────────────────────────
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+~$*
+*.tmp
+*.bak
+
+# ── 临时解压 ──────────────────────────────────────────────
+# 需要留存的历史压缩包请放到 05_output/ 或 06_management/，不要散在工程目录
+_解压临时/
